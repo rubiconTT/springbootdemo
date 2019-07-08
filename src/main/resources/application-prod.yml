@@ -1,0 +1,24 @@
+server:
+  port: 8098
+  tomcat:
+    uri-encoding: utf-8
+  servlet:
+    context-path: /
+
+datasource:
+  local:
+    url: jdbc:mysql://localhost:3306/jmis?useUnicode=true&useSSL=false&characterEncoding=utf8
+    jdbcUrl: jdbc:mysql://localhost:3306/jmis?useUnicode=true&useSSL=false&characterEncoding=utf8&rewriteBatchedStatements=true&autoReconnect=true
+    username: root
+#    password: Joywok@123
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+    validationQuery: select 'x'
+  remote:
+    url: jdbc:mysql://localhost:3306/jmis_remote?useUnicode=true&useSSL=false&characterEncoding=utf8
+    jdbcUrl: jdbc:mysql://localhost:3306/jmis_remote?useUnicode=true&useSSL=false&characterEncoding=utf8&rewriteBatchedStatements=true&autoReconnect=true
+    username: root
+#    password: Joywok@123
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+    validationQuery: select 'x'
